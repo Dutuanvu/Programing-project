@@ -33,10 +33,10 @@ def user_interface():
     print("\n=====================")
 
 def item_in_shop():
-    print("No.         Name             Quantity_in_stock")
+    print("No.         Name")
     print("===================================================")
     for d in in_stock:
-        print(f'{d["No."]}\t{d["Name"]}\t{d["Quantity_in_stock"]}')
+        print(f'{d["No."]}\t{d["Name"]}')
 
 
 
