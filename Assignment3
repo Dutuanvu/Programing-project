@@ -1,0 +1,94 @@
+in_stock = [{"No.": 1, "Name of product": "Nuke black T-shirt", "Quantity_in_stock": 100, "Price": 30000, "Size": 'S', "type": "T-shirt"},
+            {"No.": 2, "Name of product": "Nuke red sportswear T-shirt", "Quantity_in_stock": 100, "Price": 24000, "Size": 'M', "type": "T-shirt"},
+            {"No.": 3, "Name of product": "Adios black Jacket", "Quantity_in_stock": 100, "Price": 26000, "Size": 'S', "type": "Jacket"},
+            {"No. ": 4, "Name of product": "Adios dotspanther running Shoes", "Quantity_in_stock": 100, "Price": 50000, "Size": '45',"type": "Shoes"},
+            {"No.": 5, "Name of product": "Bullma Natrium football Shoes", "Quantity_in_stock": 100, "Price": 30000, "Size": '43',"type": "Shoes"},
+            {"No.": 6, "Name of product": "GUNI Kantai Jacket", "Quantity_in_stock": 100, "Price": 60000, "Size": 'L', "type": "Jacket"},
+            {"No.": 7, "Name of product": "GUNI 1984 typical Shoes", "Quantity_in_stock": 100, "Price": 65000, "Size": '40', "type": "Shoes"},
+            {"No.": 8, "Name of product": "Evo Nany gamer ultra pro max T-shirt", "Quantity_in_stock": 100, "Price": 40000, "Size": 'XL',"type": "T-shirt"},
+            {"No.": 9, "Name of product": "Hua Hao Han chinese flag T-shirt", "Quantity_in_stock": 100, "Price": 25000, "Size": 'M', "type": "T-shirt"},
+            {"No.": 10, "Name of product": "Leviosa T-shirt Harry Potter edition", "Quantity_in_stock": 100, "Price": 70000, "Size": 'L', "type": "T-shirt"},
+            {"No.": 11, "Name of product": "Leviosa dark blue T-shirt", "Quantity_in_stock": 100, "Price": 65000, "Size": 'S', "type": "T-shirt"},
+            {"No.": 12, "Name of product": "Nuke red&black sportswear T-shirt", "Quantity_in_stock": 100, "Price": 29000, "Size": 'M', "type": "T-shirt"},
+            {"No.": 13, "Name of product": "Adios violet Jacket", "Quantity_in_stock": 100, "Price": 31000, "Size": 'L', "type": "Jacket"},
+            {"No.": 14, "Name of product": "Adios black&white sportswear Shoes", "Quantity_in_stock": 100, "Price": 24000, "Size": '44', "type": "Shoes"},
+            {"No.": 15, "Name of product": "Bullma black T-shirt", "Quantity_in_stock": 100, "Price": 36000, "Size": 'XL', "type": "T-shirt"},
+            {"No.": 16, "Name of product": "Bullma yellow&green T-shirt", "Quantity_in_stock": 100, "Price": 20000, "Size": 'XXL', "type": "T-shirt"},
+            {"No.": 17, "Name of product": "Evo Nany ahegao Jacket", "Quantity_in_stock": 100, "Price": 40000, "Size": 'XL', "type": "Jacket"},
+            {"No.": 18, "Name of product": "Evo Nany vengeance light blue T-shirt", "Quantity_in_stock": 100, "Price": 35000, "Size": 'M', "type": "T-shirt"},
+            {"No.": 19, "Name of product": "Hua Hao Han cross smoke T-shirt", "Quantity_in_stock": 100, "Price": 25000, "Size": 'L', "type": "T-shirt"},
+            {"No.": 20, "Name of product": "Hua Hao Han spiral blue&green Jacket", "Quantity_in_stock": 100, "Price": 20000, "Size": 'XXL', "type": "Jacket"}]
+customer_order = in_stock
+temp = []
+order = ""
+
+def user_interface():
+    print("=====================")
+    print("Welcome to our shop")
+    print("1.List all item")
+    print("2.Information of item")
+    print("3.Search item by name")
+    print("4.Search item by ID")
+    print("5.Customer list")
+    print("6.Order item")
+    print("7.Logout")
+    print("=====================")
+
+def item_in_shop():
+    print("No.\tName\tQuantity_in_stock")
+    print("====================================================")
+    for i in in_stock:
+        print(f'{i["No."]}\t{i["Name"]}\t{i["Quantity_in_stock"]}')
+
+
+def information_item():
+    user_search = int(input("\tEnter the No. of the item: "))
+    for i in in_stock:
+        if i["No."] == user_search:
+            print("No.\tName\tQuantity_in_stock\tPrice\tSize")
+            print("====================================================")
+            print(f'{i["No."]}\t{i["Name"]}\t{i["Quantity_in_stock"]}\t\t{i["Price"]}\t{i["Size"]}')
+
+
+def user_options():
+    choice = int(input("Please enter user choice : "))
+    if choice == 1:
+        item_in_shop()
+        print("\n---------------------------------------------------\n")
+        user_interface()
+        print("\n---------------------------------------------------\n")
+        user_options()
+    elif choice == 2:
+        information_item()
+        print("\n---------------------------------------------------\n")
+        user_interface()
+        print("\n---------------------------------------------------\n")
+        user_options()
+    elif choice == 3:
+        name_search()  # can change name
+        print("\n---------------------------------------------------\n")
+        user_interface()
+        print("\n---------------------------------------------------\n")
+        user_options()
+    elif choice == 4:
+        Num_search()  # can change name
+        print("\n---------------------------------------------------\n")
+        user_interface()
+        print("\n---------------------------------------------------\n")
+        user_options()
+    elif choice == 5:
+        customer_list() # can change name
+        print("\n---------------------------------------------------\n")
+        user_interface()
+        print("\n---------------------------------------------------\n")
+        user_options()
+    elif choice == 6:
+        item_ordered() # can change name
+        print("\n---------------------------------------------------\n")
+        user_interface()
+        print("\n---------------------------------------------------\n")
+        user_options()
+    elif choice == 7:
+        print("Thank you for visiting our shop!")
+    else:
+        print("Invalid Choice. Please enter valid choice")
