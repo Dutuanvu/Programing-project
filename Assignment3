@@ -18,20 +18,17 @@ in_stock = [{"ID": 1, "Name": "Nuke black T-shirt", "Quantity_in_stock": 100, "P
             {"ID": 18, "Name": "Evo Nany vengeance light blue T-shirt", "Quantity_in_stock": 100, "Price": 35000, "Size": 'M', "type": "T-shirt"},
             {"ID": 19, "Name": "Hua Hao Han cross smoke T-shirt", "Quantity_in_stock": 100, "Price": 25000, "Size": 'L', "type": "T-shirt"},
             {"ID": 20, "Name": "Hua Hao Han spiral blue&green Jacket", "Quantity_in_stock": 100, "Price": 20000, "Size": 'XXL', "type": "Jacket"}]
-temp = []
-order = ""
+order = []
 def user_interface():
     print("=====================\n")
     print("1.List all item")
     print("2.Type of cloth")
     print("3.Search cloth by ID")
     print("4.Search cloth by name")
-    print("5.Order item")
+    print("5.Order cloth")
     print("6.Remove order")
     print("7.Payment")
     print("=====================\n")
-
-
 
 
 def cloth_in_shop():
@@ -39,8 +36,6 @@ def cloth_in_shop():
     print("===================================================")
     for d in in_stock:
         print(f'{d["ID"]}\t{d["Name"]}')
-
-
 
 def separate_cloth():
     kind = input("What kind of cloth you want to look?(T-shirt, Shoes, Jacket):")
@@ -60,28 +55,38 @@ def search_id():
             print(f'{d["ID"]}\t{d["Name"]}\t{d["Quantity_in_stock"]}\t\t{d["Price"]}\t{d["Size"]}')
 
 
-
 def search_name():
     cloth_in_shop()
     p_name = str(input("\nEnter the name : "))
-
-
-
     for d in in_stock:
         if d["Name"] == p_name:
             print(f'ID:{d["ID"]}\t Name: {d["Name"]}\t Quantity_in_stock: {d["Quantity_in_stock"]}\tPrice: {d["Price"]}\tSize: {d["Size"]}')
 
 
-
-
-
-
-
-
-
-
-
-
+def order_cloth(order):
+    cloth_in_shop()
+    p_id = int(input("\nWhat cloth do you want to buy(ID) : "))
+    for d in in_stock:
+        if d["ID"] == p_id:
+            print("\nId\tName\t    Quantity_in_stock\tPrice\tSize")
+            print("=============================================================")
+            print(f'{d["ID"]}\t{d["Name"]}\t{d["Quantity_in_stock"]}\t\t{d["Price"]}\t{d["Size"]}')
+            # order = '{d["ID"]}\t{d["Name"]}\t{d["Quantity_in_stock"]}\t\t{d["Price"]}\t{d["Size"]}'
+            quantity = int(input("How many would you like:"))
+            if quantity > d["Quantity_in_stock"]:
+                print("not enough quantity")
+            elif quantity <= 0:
+                print("wrong option")
+                order_cloth(order)
+            ask = input("\nDo you want to buy more products?(Y/N): ")
+            if ask == 'Y' or ask == 'y':
+                d["Quantity_in_stock"] -= quantity
+                print("\n Menu list")
+                order_cloth(order)
+            elif ask == 'N' or ask == 'n':
+                d["Quantity_in_stock"] -= quantity
+                print("=============================================================")
+                print("if nothing changes, go to payment!!!")
 
 
 
@@ -109,15 +114,11 @@ def userChoiceOptions():
         user_interface()
         print("\n===================================================\n")
         userChoiceOptions()
-
-
-
-
-
-
-
-
-
+    elif choice == 5:
+        order_cloth(order)
+        user_interface()
+        print("\n===================================================\n")
+        userChoiceOptions()
 
 def login():
     print("Welcome to our shop")
