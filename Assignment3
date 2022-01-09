@@ -1,42 +1,83 @@
-in_stock = [{"No.": 1, "Name": "Nuke black T-shirt", "Quantity_in_stock": 100, "Price": 30000, "Size": 'S', "type": "T-shirt"},
-            {"No.": 2, "Name": "Nuke red sportswear T-shirt", "Quantity_in_stock": 100, "Price": 24000, "Size": 'M', "type": "T-shirt"},
-            {"No.": 3, "Name": "Adios black Jacket", "Quantity_in_stock": 100, "Price": 26000, "Size": 'S', "type": "Jacket"},
-            {"No.": 4, "Name": "Adios dotspanther running Shoes", "Quantity_in_stock": 100, "Price": 50000, "Size": '45',"type": "Shoes"},
-            {"No.": 5, "Name": "Bullma Natrium football Shoes", "Quantity_in_stock": 100, "Price": 30000, "Size": '43',"type": "Shoes"},
-            {"No.": 6, "Name": "GUNI Kantai Jacket", "Quantity_in_stock": 100, "Price": 60000, "Size": 'L', "type": "Jacket"},
-            {"No.": 7, "Name": "GUNI 1984 typical Shoes", "Quantity_in_stock": 100, "Price": 65000, "Size": '40', "type": "Shoes"},
-            {"No.": 8, "Name": "Evo Nany gamer ultra pro max T-shirt", "Quantity_in_stock": 100, "Price": 40000, "Size": 'XL',"type": "T-shirt"},
-            {"No.": 9, "Name": "Hua Hao Han chinese flag T-shirt", "Quantity_in_stock": 100, "Price": 25000, "Size": 'M', "type": "T-shirt"},
-            {"No.": 10, "Name": "Leviosa T-shirt Harry Potter edition", "Quantity_in_stock": 100, "Price": 70000, "Size": 'L', "type": "T-shirt"},
-            {"No.": 11, "Name": "Leviosa dark blue T-shirt", "Quantity_in_stock": 100, "Price": 65000, "Size": 'S', "type": "T-shirt"},
-            {"No.": 12, "Name": "Nuke red&black sportswear T-shirt", "Quantity_in_stock": 100, "Price": 29000, "Size": 'M', "type": "T-shirt"},
-            {"No.": 13, "Name": "Adios violet Jacket", "Quantity_in_stock": 100, "Price": 31000, "Size": 'L', "type": "Jacket"},
-            {"No.": 14, "Name": "Adios black&white sportswear Shoes", "Quantity_in_stock": 100, "Price": 24000, "Size": '44', "type": "Shoes"},
-            {"No.": 15, "Name": "Bullma black T-shirt", "Quantity_in_stock": 100, "Price": 36000, "Size": 'XL', "type": "T-shirt"},
-            {"No.": 16, "Name": "Bullma yellow&green T-shirt", "Quantity_in_stock": 100, "Price": 20000, "Size": 'XXL', "type": "T-shirt"},
-            {"No.": 17, "Name": "Evo Nany ahegao Jacket", "Quantity_in_stock": 100, "Price": 40000, "Size": 'XL', "type": "Jacket"},
-            {"No.": 18, "Name": "Evo Nany vengeance light blue T-shirt", "Quantity_in_stock": 100, "Price": 35000, "Size": 'M', "type": "T-shirt"},
-            {"No.": 19, "Name": "Hua Hao Han cross smoke T-shirt", "Quantity_in_stock": 100, "Price": 25000, "Size": 'L', "type": "T-shirt"},
-            {"No.": 20, "Name": "Hua Hao Han spiral blue&green Jacket", "Quantity_in_stock": 100, "Price": 20000, "Size": 'XXL', "type": "Jacket"}]
+in_stock = [{"ID": 1, "Name": "Nuke black T-shirt", "Quantity_in_stock": 100, "Price": 30000, "Size": 'S', "type": "T-shirt"},
+            {"ID": 2, "Name": "Nuke red sportswear T-shirt", "Quantity_in_stock": 100, "Price": 24000, "Size": 'M', "type": "T-shirt"},
+            {"ID": 3, "Name": "Adios black Jacket", "Quantity_in_stock": 100, "Price": 26000, "Size": 'S', "type": "Jacket"},
+            {"ID": 4, "Name": "Adios dotspanther running Shoes", "Quantity_in_stock": 100, "Price": 50000, "Size": '45',"type": "Shoes"},
+            {"ID": 5, "Name": "Bullma Natrium football Shoes", "Quantity_in_stock": 100, "Price": 30000, "Size": '43',"type": "Shoes"},
+            {"ID": 6, "Name": "GUNI Kantai Jacket", "Quantity_in_stock": 100, "Price": 60000, "Size": 'L', "type": "Jacket"},
+            {"ID": 7, "Name": "GUNI 1984 typical Shoes", "Quantity_in_stock": 100, "Price": 65000, "Size": '40', "type": "Shoes"},
+            {"ID": 8, "Name": "Evo Nany gamer ultra pro max T-shirt", "Quantity_in_stock": 100, "Price": 40000, "Size": 'XL',"type": "T-shirt"},
+            {"ID": 9, "Name": "Hua Hao Han chinese flag T-shirt", "Quantity_in_stock": 100, "Price": 25000, "Size": 'M', "type": "T-shirt"},
+            {"ID": 10, "Name": "Leviosa T-shirt Harry Potter edition", "Quantity_in_stock": 100, "Price": 70000, "Size": 'L', "type": "T-shirt"},
+            {"ID": 11, "Name": "Leviosa dark blue T-shirt", "Quantity_in_stock": 100, "Price": 65000, "Size": 'S', "type": "T-shirt"},
+            {"ID": 12, "Name": "Nuke red&black sportswear T-shirt", "Quantity_in_stock": 100, "Price": 29000, "Size": 'M', "type": "T-shirt"},
+            {"ID": 13, "Name": "Adios violet Jacket", "Quantity_in_stock": 100, "Price": 31000, "Size": 'L', "type": "Jacket"},
+            {"ID": 14, "Name": "Adios black&white sportswear Shoes", "Quantity_in_stock": 100, "Price": 24000, "Size": '44', "type": "Shoes"},
+            {"ID": 15, "Name": "Bullma black T-shirt", "Quantity_in_stock": 100, "Price": 36000, "Size": 'XL', "type": "T-shirt"},
+            {"ID": 16, "Name": "Bullma yellow&green T-shirt", "Quantity_in_stock": 100, "Price": 20000, "Size": 'XXL', "type": "T-shirt"},
+            {"ID": 17, "Name": "Evo Nany ahegao Jacket", "Quantity_in_stock": 100, "Price": 40000, "Size": 'XL', "type": "Jacket"},
+            {"ID": 18, "Name": "Evo Nany vengeance light blue T-shirt", "Quantity_in_stock": 100, "Price": 35000, "Size": 'M', "type": "T-shirt"},
+            {"ID": 19, "Name": "Hua Hao Han cross smoke T-shirt", "Quantity_in_stock": 100, "Price": 25000, "Size": 'L', "type": "T-shirt"},
+            {"ID": 20, "Name": "Hua Hao Han spiral blue&green Jacket", "Quantity_in_stock": 100, "Price": 20000, "Size": 'XXL', "type": "Jacket"}]
 temp = []
 order = ""
 def user_interface():
     print("=====================\n")
-    print("Welcome to our shop")
     print("1.List all item")
-    print("2.Information of item")
-    print("3.Search item by name")
-    print("4.Search item by ID")
+    print("2.Type of cloth")
+    print("3.Search cloth by ID")
+    print("4.Search cloth by name")
     print("5.Order item")
     print("6.Remove order")
     print("7.Payment")
-    print("\n=====================")
+    print("=====================\n")
 
-def item_in_shop():
-    print("No.         Name")
+
+
+
+def cloth_in_shop():
+    print("ID         Name")
     print("===================================================")
     for d in in_stock:
-        print(f'{d["No."]}\t{d["Name"]}')
+        print(f'{d["ID"]}\t{d["Name"]}')
+
+
+
+def separate_cloth():
+    kind = input("What kind of cloth you want to look?(T-shirt, Shoes, Jacket):")
+    for d in in_stock:
+        if d["type"] == kind:
+            print(f'{d["ID"]}\t{d["Name"]}')
+
+
+
+def search_id():
+    p_id = int(input("\nEnter the id : "))
+
+    for d in in_stock:
+        if d["ID"] == p_id:
+            print("\nId\tName\t    Quantity_in_stock\tPrice\tSize")
+            print("=============================================================")
+            print(f'{d["ID"]}\t{d["Name"]}\t{d["Quantity_in_stock"]}\t\t{d["Price"]}\t{d["Size"]}')
+
+
+
+def search_name():
+    cloth_in_shop()
+    p_name = str(input("\nEnter the name : "))
+
+
+
+    for d in in_stock:
+        if d["Name"] == p_name:
+            print(f'ID:{d["ID"]}\t Name: {d["Name"]}\t Quantity_in_stock: {d["Quantity_in_stock"]}\tPrice: {d["Price"]}\tSize: {d["Size"]}')
+
+
+
+
+
+
+
+
 
 
 
@@ -49,11 +90,26 @@ def item_in_shop():
 def userChoiceOptions():
     choice = int(input("Please enter user choice : "))
     if choice == 1:
-        item_in_shop()
-        print("\n===================================================\n")
+        cloth_in_shop()
         user_interface()
         print("\n===================================================\n")
         userChoiceOptions()
+    elif choice == 2:
+        separate_cloth()
+        user_interface()
+        print("\n===================================================\n")
+        userChoiceOptions()
+    elif choice == 3:
+        search_id()
+        user_interface()
+        print("\n===================================================\n")
+        userChoiceOptions()
+    elif choice == 4:
+        search_name()
+        user_interface()
+        print("\n===================================================\n")
+        userChoiceOptions()
+
 
 
 
