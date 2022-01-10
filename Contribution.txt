@@ -17,3 +17,5 @@ Bui Dang Khoa : dictionary of cloth, write code list all cloth in shop and type 
 Du Tuan Vu (leader) : write code order cloth, user choice option, login and register, fix bug (40%)
 
 Mai Chi Nghi : write code search by ID and name, fix bug (30%)
+
+link to github : https://github.com/Dutuanvu/Programing-project.git
