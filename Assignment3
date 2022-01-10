@@ -29,7 +29,7 @@ def user_interface():
     print("6.Remove order")
     print("7.Payment")
     print("=====================\n")
-# user choice for shopping
+# user choice when shopping
 
 def cloth_in_shop():
     print("ID         Name")
