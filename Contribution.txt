@@ -1,0 +1,19 @@
+This is the role of each member in the group project of COSC2429_Introduction to Programming.
+
+Our group have 3 members:
+
+Bui Dang Khoa
+
+Du Tuan Vu
+
+Mai Chi Nghi
+
+About Ta Hoang Lich we have contacted him but get no response so we only have 3 members available in this project.
+
+The role of each one in group is:
+
+Bui Dang Khoa : dictionary of cloth, write code list all cloth in shop and type of cloth, comment on code (30%)
+
+Du Tuan Vu (leader) : write code order cloth, user choice option, login and register, fix bug (40%)
+
+Mai Chi Nghi : write code search by ID and name, fix bug (30%)
