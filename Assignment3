@@ -27,21 +27,21 @@ def user_interface():
     print("3.Search cloth by ID")
     print("4.Search cloth by name")
     print("5.Order cloth")
-    print("6.Payment")
+    print("6.Register")
     print("=====================\n")
-
+# user choice when shopping
 def cloth_in_shop():
     print("ID         Name")
     print("===================================================")
     for d in in_stock:
         print(f'{d["ID"]}\t{d["Name"]}')
-
+# list all cloth in shop
 def separate_cloth():
     kind = input("What kind of cloth you want to look?(T-shirt, Shoes, Jacket):")
     for d in in_stock:
         if d["type"] == kind:
             print(f'{d["ID"]}\t{d["Name"]}')
-
+# type of cloth that user want to see
 def search_id():
     p_id = int(input("\nEnter the id : "))
 
@@ -50,7 +50,7 @@ def search_id():
             print("\nId\tName\t    Quantity_in_stock\tPrice\tSize")
             print("=============================================================")
             print(f'{d["ID"]}\t{d["Name"]}\t{d["Quantity_in_stock"]}\t\t{d["Price"]}\t{d["Size"]}')
-
+# search by the ID of cloth and code will show the ID, name, quantity, price and size of the cloth
 
 def search_name():
     cloth_in_shop()
@@ -58,7 +58,7 @@ def search_name():
     for d in in_stock:
         if d["Name"] == p_name:
             print(f'ID:{d["ID"]}\t Name: {d["Name"]}\t Quantity_in_stock: {d["Quantity_in_stock"]}\tPrice: {d["Price"]}\tSize: {d["Size"]}')
-
+# search by name of cloth and show the same result as search_id
 def order_cloth():
     cloth_in_shop()
     p_id = int(input("\nWhat cloth do you want to buy(ID) : "))
@@ -85,7 +85,7 @@ def order_cloth():
                 print("=============================================================")
                 print("if nothing changes, go to payment!!!")
             order_cart = print(f'your others are:\t{str(quantity)}\t{d["Name"]}\t price:{quantity * d["Price"]}')
-
+# user order the cloth by input the ID of the cloth and the code will check the quantity of cloth for the user to choose
 def register():
         print("What's your name?")
         name = input("Name: ")
@@ -111,6 +111,7 @@ def register():
         f.close()
         print(" registered successfully!")
         print(" Thank you and happy new year")
+# user register their information when they need to deliver cloth to their address
 def userChoiceOptions():
     choice = int(input("Please enter user choice : "))
     if choice == 1:
@@ -143,7 +144,7 @@ def userChoiceOptions():
         user_interface()
         print("\n===================================================\n")
         userChoiceOptions()
-
+# the code will run the def base on the choice by the user
 def login():
     print("Welcome to our shop")
     password = input("Do you want to take a look?(Yes/No): ")
@@ -154,3 +155,4 @@ def login():
         print("Have a nice day")
         login()
 login()
+# this is what user will see when they go to the shop
