@@ -22,7 +22,7 @@ in_stock = [{"ID": 1, "Name": "Nuke black T-shirt", "Quantity_in_stock": 100, "P
 order = []
 def user_interface():
     print("=====================\n")
-    print("1.List all cloth")
+    print("1.List all clothes")
     print("2.Type of cloth")
     print("3.Search cloth by ID")
     print("4.Search cloth by name")
